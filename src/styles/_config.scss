@@ -1,0 +1,41 @@
+@import '_reset';
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+
+
+html,body {
+	position: relative;
+    margin:0;
+    padding:0;
+    font-family: $base-font-family;
+
+    &>iframe, &>object {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+	color: #83287d;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	color: #83287d;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

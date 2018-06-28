@@ -1,0 +1,60 @@
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin vendor($property, $value) {
+-webkit-#{$property}: $value;
+   -moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	 -o-#{$property}: $value;
+		#{$property}: $value;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+@mixin box-shadow($format,$h-shadow,$v-shadow,$blur,$spread,$color) {
+	-webkit-box-shadow: $format $h-shadow $v-shadow $blur $spread $color !important;
+	-moz-box-shadow: $format $h-shadow $v-shadow $blur $spread $color !important;
+	-ms-box-shadow: $format $h-shadow $v-shadow $blur $spread $color !important;
+	-o-box-shadow: $format $h-shadow $v-shadow $blur $spread $color !important;
+	box-shadow: $format $h-shadow $v-shadow $blur $spread $color !important;
+}
+
+@mixin transition($property,$duration,$mode,$delay) {
+	-webkit-transition: $property $duration $mode $delay;
+	-moz-transition: $property $duration $mode $delay;
+	-ms-transition: $property $duration $mode $delay;
+	-o-transition: $property $duration $mode $delay;
+	transition: $property $duration $mode $delay;
+}
+
+@mixin blur($blur) {
+	-webkit-filter: blur($blur);
+	-moz-filter: blur($blur);
+	-ms-filter: blur($blur);
+	-o-filter: blur($blur);
+	filter: blur($blur);
+}
+
+// ===============================================================
+/* EXTENDS */
+// ===============================================================
+%transition {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+%wFull {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	 -o-box-sizing: border-box;
+		box-sizing: border-box;
+}

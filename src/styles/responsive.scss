@@ -1,0 +1,425 @@
+@import 'variables';
+@import 'mixins';
+
+@media screen and (max-width:960px) {
+	header,footer {
+		section {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+	}
+
+	header {
+		section {
+			position: relative;
+			text-align: center;
+
+			.menu {
+				position: absolute;
+				top: 70px;
+				right: 0;
+				width: 100%;
+				height: 0;
+
+				li {
+					display: none;
+				}
+
+				&.active {
+					height: auto;
+					margin-top: 10px;
+					border-top: 2px solid #8c7bde;
+					background: $bg-blue-dark;
+					@include vendor(opacity,0.95);
+
+					li {
+						display: block;
+						position: relative;
+						margin: 10px 0;
+						padding: 30px 0;
+
+						&:after {
+							display: block;
+							position: absolute;
+							bottom: 0;
+							left: 50%;
+							content: '';
+							width: 40px;
+							height: 2px;
+							background: #394669;
+							@include vendor(transform,translateX(-50%));
+						}
+
+						&:first-child {
+							margin-top: 0;
+						}
+
+						&:last-child {
+							&:after {
+								display: none;
+							}
+						}
+					}
+
+					+ .link-menu-mobile {
+						background: transparent;
+
+						&:before {
+							transform: rotate(-45deg);
+							top: 0;
+						}
+
+						&:after {
+							transform: rotate(45deg);
+							top: 0;
+						}
+					}
+				}
+			}
+
+			.link-menu-mobile {
+				display: block;
+				position: absolute;
+				top: 40px;
+				right: 15px;
+				width: 30px;
+				height: 5px;
+				margin-top: -5px;
+				background: $color-white;
+
+				&:before {
+					display: block;
+					content: '';
+					position: absolute;
+					top: -10px;
+					right: 0;
+					width: 100%;
+					height: 5px;
+					background: $color-white;
+				}
+
+				&:after {
+					display: block;
+					content: '';
+					position: absolute;
+					top: 10px;
+					right: 0;
+					width: 100%;
+					height: 5px;
+					background: $color-white;
+				}
+			}
+		}
+
+		&.change {
+			section {
+				
+			}
+		}
+	}
+
+	.main {
+		section {
+			h2 {
+				margin-right: auto;
+				margin-left: auto;
+				text-align: center !important;
+			}
+		}
+
+		#banner {
+			height: 485px;
+
+			section {
+				p {
+					padding: 0 10px;
+					@include vendor(opacity,1 !important);
+					@include vendor(transition,none !important);
+				}
+			}
+		}
+
+		#sobre, #metodologia, #produtos, #contato {
+			section {
+				.container {
+					padding-right: 20px;
+					padding-left: 20px;
+				}
+			}
+		}
+
+		#sobre, #metodologia {
+			.imagem {
+				display: none;
+			}
+		}
+
+		#sobre {
+			section {
+				.container {
+					margin: 0 auto;
+				}
+			}
+		}
+
+		#metodologia {
+			section {
+				.container {
+					padding: 0;
+
+					.itens {
+						.item-1, .item-2, .item-3 {
+							@include vendor(opacity,1 !important);
+							@include vendor(transition,none !important);
+						}
+					}
+
+					.texto {
+						margin: 0 auto;
+						margin-top: 100px;
+						padding: 0 20px;
+
+						p.title {
+							max-width: 200px;
+							margin: 30px auto;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+
+		#produtos {
+			section {
+				.container {
+					&>div {
+						.inside {
+							&:hover {
+								&:before {
+									display: none;
+									@include vendor(opacity,0);
+								}
+
+								span {
+									top: 50%;
+									left: 50%;
+									color: $color-gray;
+								}
+							}
+
+							&:before {
+								display: none;
+								@include vendor(opacity,0);
+							}
+						}
+					}
+
+					.ux {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_ux.png') center center no-repeat;
+							}
+						}
+					}
+
+					.sites {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_sites.png') center center no-repeat;
+							}
+						}
+					}
+
+					.lp {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_lp.png') 32px center no-repeat;
+							}
+						}
+					}
+
+					.facebook {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_facebook.png') center center no-repeat;
+							}
+						}
+					}
+
+					.seo {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_seo.png') center center no-repeat;
+							}
+						}
+					}
+
+					.ai {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_ai.png') center center no-repeat;
+							}
+						}
+					}
+
+					.relatorio {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_relatorio.png') 36px center no-repeat;
+							}
+						}
+					}
+
+					.app {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_app.png') center center no-repeat;
+							}
+						}
+					}
+
+					.bd {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_bd.png') center center no-repeat;
+							}
+						}
+					}
+
+					.criacao {
+						.inside {
+							&:hover {
+								background: $color-gray-light url('../img/ico/produtos_criacao.png') center center no-repeat;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#contato {
+			section {
+				.container {
+					form {
+						width: 300px;
+						margin: 0 auto;
+
+						>fieldset {
+							&:last-child {
+								margin-top: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:768px) {
+	header {
+		section {
+			text-align: center;
+
+			.menu {
+				width: 100%;
+
+				&.active {
+					height: auto;
+					margin-top: 10px;
+					border-top: 2px solid #8c7bde;
+
+					li {
+						position: relative;
+						padding: 30px 0;
+
+						&:after {
+							display: block;
+							position: absolute;
+							bottom: 0;
+							left: 50%;
+							content: '';
+							width: 40px;
+							height: 2px;
+							background: #394669;
+							@include vendor(transform,translateX(-50%));
+						}
+
+						&:last-child {
+							&:after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		section {
+			&>div {
+				display: block;
+				float: none !important;
+				width: 100%;
+				margin: 20px auto !important;
+				padding: 0 !important;
+				text-align: center;
+
+				&.redes-sociais {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}	
+}
+
+@media screen and (max-width:480px) {
+	.main {
+		section {
+			h2 {
+				width: 90% !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:360px) {
+	#produtos {
+		section {
+			.container {
+				&>div {
+					.inside {
+						margin: 0 auto;
+					}
+				}
+			}
+
+			.slick-dots {
+				li {
+					margin: 0 2px;
+				}
+			}
+		}
+	}
+
+	#contato {
+		section {
+			.container {
+				form {
+					fieldset {
+						margin-right: 0 !important;
+
+						input {
+							width: 95% !important;
+						}
+
+						textarea {
+							width: 90% !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

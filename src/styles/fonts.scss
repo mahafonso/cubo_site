@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'roboto-thin';
+	src: url('../fnt/roboto-thin.eot');
+	src: url('../fnt/roboto-thin.eot?#iefix') format('embedded-opentype'),
+		 url('../fnt/roboto-thin.woff') format('woff'),
+		 url('../fnt/roboto-thin.ttf') format('truetype'),
+		 url('../fnt/roboto-thin.svg#roboto-thin') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+
+$arial:			Arial, Helvetica, sans-serif !default;
+$robotoThin:	'roboto-thin', Arial, Helvetica, sans-serif !default;
